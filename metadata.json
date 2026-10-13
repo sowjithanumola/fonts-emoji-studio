@@ -1,0 +1,6 @@
+{
+  "name": "Emoji & Fonts Studio",
+  "description": "Express More. Copy Instantly. Explore thousands of emojis, 30+ fancy Unicode fonts, aesthetic symbols, kaomojis, gaming name styles, and social media bio templates.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
