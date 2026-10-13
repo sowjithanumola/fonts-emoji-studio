@@ -20,7 +20,7 @@ import { FavoritesView } from './components/views/FavoritesView';
 import { Sparkles, Heart } from 'lucide-react';
 
 const AppContent: React.FC = () => {
-  const { activePage, isSidebarCollapsed } = useApp();
+  const { activePage, isSidebarCollapsed, theme } = useApp();
 
   const renderActiveView = () => {
     switch (activePage) {
@@ -46,7 +46,11 @@ const AppContent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-neutral-50 dark:bg-[#090a10] text-neutral-900 dark:text-neutral-100 transition-colors duration-200">
+    <div className={`min-h-screen flex flex-col transition-colors duration-200 ${
+      theme === 'dark' 
+        ? 'dark bg-[#090a10] text-neutral-100' 
+        : 'bg-neutral-50 text-neutral-900'
+    }`}>
       <Sidebar />
       <Header />
 

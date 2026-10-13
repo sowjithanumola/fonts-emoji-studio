@@ -85,13 +85,19 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   // Emoji stacker
   const [emojiStack, setEmojiStack] = useState<string[]>(['✨', '🔥', '🚀']);
 
-  // Update theme class on HTML element
+  // Update theme class on HTML and body elements
   useEffect(() => {
     try {
+      const root = document.documentElement;
+      const body = document.body;
       if (theme === 'dark') {
-        document.documentElement.classList.add('dark');
+        root.classList.add('dark');
+        body.classList.add('dark');
+        root.setAttribute('data-theme', 'dark');
       } else {
-        document.documentElement.classList.remove('dark');
+        root.classList.remove('dark');
+        body.classList.remove('dark');
+        root.setAttribute('data-theme', 'light');
       }
       localStorage.setItem('studio_theme', theme);
     } catch {}
