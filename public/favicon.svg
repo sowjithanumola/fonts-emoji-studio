@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9333ea"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Rounded Squircle Background -->
+  <rect width="64" height="64" rx="16" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle inner border -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+
+  <!-- Centered Sparkle Symbol & Stylized Font glyph -->
+  <!-- Main 4-point sparkle -->
+  <path d="M32 12 C32 23 23 32 12 32 C23 32 32 41 32 52 C32 41 41 32 52 32 C41 32 32 23 32 12 Z" fill="#ffffff" filter="url(#glow)"/>
+  
+  <!-- Mini Accent Sparkle Top Right -->
+  <path d="M46 12 C46 16.5 42.5 20 38 20 C42.5 20 46 23.5 46 28 C46 23.5 49.5 20 54 20 C49.5 20 46 16.5 46 12 Z" fill="#ffd166"/>
+  
+  <!-- Mini Accent Sparkle Bottom Left -->
+  <path d="M18 40 C18 43 15.5 45.5 12.5 45.5 C15.5 45.5 18 48 18 51 C18 48 20.5 45.5 23.5 45.5 C20.5 45.5 18 43 18 40 Z" fill="#e0e7ff"/>
+</svg>
